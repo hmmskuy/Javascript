@@ -59,7 +59,7 @@ let person = {
 
   // Deklarasi dan instansiasi kelas
 
-  const  bv h n,jbjbBook {
+  const iwn diBook {
     constructor(title, author) {
       this.title = title;
       this.asd = author;
