@@ -1,5 +1,5 @@
 // Cast 1
-let hari = "Rabu";
+let hari = "jumat";
 
 switch (hari) {
   case "Senin":

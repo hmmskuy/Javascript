@@ -18,7 +18,7 @@ let person = {
     city: "bandung "
   };
   console.log(person.name);
-  console.log(person["name"])
+  console.log(person["nama"])
 
 
   // Mengubah age menggunakan dot notation
@@ -59,21 +59,20 @@ let person = {
 
   // Deklarasi dan instansiasi kelas
 
-  const iwn diBook {
+  class Book {
     constructor(title, author) {
       this.title = title;
-      this.asd = author;
+      this.author = author;
     }
   
     getDetails() {
-    return `Title: ${this.title}, Author: ${this.asd}`;
+      return `Title: ${this.title}, Author: ${this.author}`;
     }
-      
   }
   
-  const myBook = new Book("JavaScript Essentials", "abdillah");
+  const myBook = new Book("JavaScript Essentials", "Hammam");
   
-  console.log(myBoo k.getDetails());
+  console.log(myBook.getDetails());
   
   class animal {
     constructor(name, from, penulis) {
@@ -93,11 +92,12 @@ let person = {
     }
   }
   
-  const myanimal = new animal("lion king", "depok");
+  const myanimal = new animal("lion king", "Jakarta");
   
   console.log(myanimal.getDetails()); // Output: Title: JavaScript Essentials, Author: Jane Doe
   
   //   animal.updateanimal("titan");
   
   console.log(myanimal.getDetails());
+  
 
