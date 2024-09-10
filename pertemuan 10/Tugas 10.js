@@ -1,166 +1,140 @@
-function luaspersegi(s){
-    let luas = s * s ;
-    return luas;
+function luasPersegi(s) {
+  return s * s;
 }
-console.log(luaspersegi(4))
 
+console.log(luasPersegi(8));
 
+// Skillvull clear
 
-// Tugas Soal Part 10 
-// Latihan soal ke 1
+//soal 1 start
+
 function registerUser(name, userType) {
-    let welcomeMessage;
-  
-    if (userType === "VIP") {
-      welcomeMessage = `Welcome VIP, ${name}!`;
-    } else {
-      welcomeMessage = `Welcome, ${name}!`;
-    }
-  
-    return welcomeMessage;
-  }
-  
-  // Memanggil fungsi dengan nama "Nina" dan userType "VIP"
-  let result = registerUser("Nina", "VIP");
-  
-  // Menampilkan pesan selamat datang
-  console.log(result); // Output: Welcome VIP, Nina!
-
-// soal ke 1 bagian 2
-  function applyDiscount(userType, purchaseAmount) {
-    let discount;
-  
-    // Tentukan diskon berdasarkan jenis pengguna
-    if (userType === "VIP") {
-      discount = 20;
-    } else {
-      discount = 10;
-    }
-  
-    // Hitung jumlah diskon
-    let discountAmount = (discount / 100) * purchaseAmount;
-  
-    // Hitung total pembayaran setelah diskon
-    let totalAfterDiscount = purchaseAmount - discountAmount;
-  
-    return totalAfterDiscount;
-  }
-  
-  // Memanggil fungsi untuk pengguna VIP
-  let vipTotal = applyDiscount("VIP", 200);
-  console.log("Total pembayaran untuk VIP:", vipTotal);
-  
-  // Memanggil fungsi untuk pengguna non-VIP
-  let nonVipTotal = applyDiscount("NON VIP", 100);
-  console.log("Total pembayaran untuk non-VIP:", nonVipTotal);
-
-  // Latihan Soal  ke 2 bagian ke 1
-  function calculatePrice(quantity, pricePerItem, isMember) {
-    let totalHarga = quantity * pricePerItem;
-  
-    if (isMember) {
-      let diskon = totalHarga * 0.15;
-      totalHarga -= diskon;
-    }
-  
-    return totalHarga;
-  }
-  
-  // Memanggil fungsi dengan argument 3, 150, dan true
-  let hargaAkhir = calculatePrice(3, 150, true);
-  
-  // Menampilkan hasil ke layar
-  console.log("Total harga yang harus dibayar:", hargaAkhir);
-  
-
-   // soal ke 2 bagian 2
-   function confirmPurchase(isConfirmed, totalPrice) {
-    if (isConfirmed) {
-        console.log("Purchase confirmed with total price: " + totalPrice);
-    } else {
-        console.log("Purchase not confirmed");
-    }
-}
-
-function calculatePrice() {
-    // Misalnya, fungsi ini menghitung total harga
-    return 150000; // ganti dengan logika perhitungan harga sebenarnya
-}
-
-// Memanggil fungsi confirmPurchase dengan isConfirmed true dan hasil dari fungsi calculatePrice
-confirmPurchase(true, calculatePrice());
-
-
-// Latihan soal ke 3 
-function checkStock(item, requestedQuantity) {
-  const stock = 50; // Stok barang yang tersedia
-
-  // Memastikan requestedQuantity adalah angka positif
-  if (requestedQuantity <= 0) {
-    return "Jumlah yang diminta harus lebih dari 0.";
-  }
-
-  if (requestedQuantity <= stock) {
-    return `Stock  insufficient ${item}`;
+  if (userType == "VIP") {
+    return "Welcome VIP " + name + "!";
   } else {
-    return `Stock insufficient ${item}`;
+    return "Welcome " + name + "!";
   }
 }
 
-// Memeriksa stok barang "laptop" dengan requestedQuantity 60
-var stock = checkStock("60");
+console.log(registerUser("Nina", "VIP"));
+console.log(registerUser("Nina"));
+
+function applyDiscount(userType, purchaseAmount) {
+  var discount;
+  if (userType == "VIP") {
+    discount = 0.2;
+  } else {
+    discount = 0.1;
+  }
+  return purchaseAmount - purchaseAmount * discount;
+}
+
+console.log(applyDiscount("VIP", 200));
+console.log(applyDiscount("Non-VIP", 100));
+
+//soal1 clear
+
+//soal 2 start
+
+function calculatePrice(quantity, pricePerItem, isMember) {
+  var discount2;
+
+  if (isMember == true) {
+    discount2 = 0.15;
+  } else {
+    discount2 = 0;
+  }
+  return quantity * pricePerItem * (1 - discount2);
+}
+
+console.log(calculatePrice(3, 150, true));
+
+function confirmPurchase(isConfirmed, totalPrice) {
+  if (isConfirmed == true) {
+    return "Purchase confirmed with total price: " + totalPrice;
+  } else {
+    return "Purchase not confirmed";
+  }
+}
+
+console.log(confirmPurchase(true, 150));
+console.log(confirmPurchase(false, 150));
+
+//soal 2 clear
+
+//soal 3 start
+
+
+
+function checkStock(requestedQuantity, item) {
+  if (item >= requestedQuantity) {
+    return "Stock sufficient for " + requestedQuantity + ". Current stock: " + item;
+  } else {
+    return "Stock insufficient for " + requestedQuantity + ". Current stock: " + item;
+  }
+}
+
+var stock = checkStock(50, 60);
 console.log(stock);
 
-// Latihan soal ke 3 bagian 2
-function calculateTax(price,location) {
-} 
+stock = checkStock(60, 60);
+console.log(stock);
 
-// Latihan soal ke 4 Bagian 1 
+stock = checkStock(70, 60);
+console.log(stock);
+
+function restockItem(additionalStock, item, requestedQuantity) {
+  item += additionalStock; 
+
+  if (item >= requestedQuantity) {
+    return "Restock Complete. Current stock: " + item + ". Required stock: " + requestedQuantity;
+  } else {
+    return "Restock needed. Current stock: " + item + ". Required stock: " + requestedQuantity;
+  }
+}
+
+
+console.log(restockItem(20, 20, 30));
+
+//soal 3 clear
+
+//soal 4 start
+
 function calculateTax(price, location) {
-  let taxRate;
-
-  // Tentukan tarif pajak berdasarkan lokasi
-  if (location === "Jakarta") {
-    taxRate = 0.1; // 10%
-  } else if (location === "Bandung") {
-    taxRate = 0.05; // 5%
+  if (location == "Jakarta") {
+    return price * 0.1;
+  } else if (location == "Bandung") {
+    return price * 0.05;
   } else {
-    console.log("Lokasi tidak valid. Hanya Jakarta dan Bandung yang didukung.");
-    return;
+    return 0;
   }
-
-  // Hitung jumlah pajak
-  const taxAmount = price * taxRate;
-
-  // Hitung harga akhir
-  const finalPrice = price + taxAmount;
-
-  return finalPrice;
 }
 
-// Panggil fungsi calculateTax dengan harga 1000 dan lokasi "Jakarta"
-const finalPrice = calculateTax(1000, "Jakarta");
+var finalPrice = calculateTax(10000, "Jakarta");
+console.log(finalPrice);
 
-// Cetak hasil ke layar
-console.log("Harga akhir setelah pajak:", finalPrice);
- 
-
-// Soal ke 4 Bagian 2
 function displayResult(finalPrice, paymentStatus) {
-  if (paymentStatus === "paid") {
-      console.log("Payment successful! Total amount: " + finalPrice);
+  console.log(finalPrice);
+  
+  if (paymentStatus == "paid") {
+    return "Payment successful! Total amount: " + finalPrice;
   } else {
-      console.log("Payment pending");
+    return "Payment pending";
   }
 }
 
-function calculateTax() {
-  // Misalnya, fungsi ini menghitung harga akhir termasuk pajak
-  const basePrice = 100000;
-  const taxRate = 0.1; // 10% pajak
-  return basePrice + (basePrice * taxRate);
+
+console.log(displayResult(finalPrice, "paid")); 
+console.log(displayResult(finalPrice, "pending"));   
+
+//soal 4 clear
+
+const persegiPanjang = (panjang, lebar) => panjang * lebar
+
+console.log(persegiPanjang(10, 5));
+
+const persegi = (sisi) => {
+  return 4 * sisi
 }
 
-// Memanggil fungsi displayResult dengan finalPrice dari fungsi calculateTax dan paymentStatus "paid"
-displayResult(calculateTax(), "paid");
-
+console.log(persegi(5));
