@@ -22,7 +22,7 @@ let person = {
 
 
   // Mengubah age menggunakan dot notation
-  person.age = person.age +5
+  person.age = person.age + 5
   console.log(person.age)
   // Mengubah age menggunakan bracket notation
   person["age"] = person["age"] +5

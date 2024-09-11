@@ -1,71 +1,149 @@
-// no 1
-class Vehicle {
+class Orang {
+  constructor(nama, umur) {
+    this.nama = nama;
+    this.umur = umur;
+  }
+
+  tidur() {
+    return `${this.nama} sedang tidur`;
+  }
+
+  makan() {
+    return `${this.nama} sedang makan`;
+  }
+}
+
+// Tulis kode  di bawah ini
+
+class Pelajar extends Orang {
+  constructor(nama, umur, namaSekolah) {
+    super(nama, umur);
+    this.namaSekolah = namaSekolah;
+  }
+
+  belajar() {
+    return `${this.nama} belajar di ${this.namaSekolah}`;
+  }
+}
+
+let user = new Pelajar("Terra", 17, "Skilvul");
+
+console.log(user.makan());
+console.log(user.tidur());
+console.log(user.belajar());
+
+class Hewan {
+  constructor(nama) {
+    this.nama = nama;
+  }
+
+  makan() {
+    return "Hewan sedang makan";
+  }
+}
+
+// Buat kode di bawah ini
+
+class Harimau extends Hewan {
+  constructor(nama) {
+    super(nama);
+  }
+  makan() {
+    return `${this.nama} makan daging`;
+  }
+}
+
+let harimauSumatera = new Harimau("Harimau Sumatera");
+
+console.log(harimauSumatera.makan());
+
+
+
+// soal 1
+
+class vehicle {
   constructor(brand) {
     this.brand = brand;
-  }
+  } 
 
-  start() {
-    return "Vahicle is starting";
+  Start() {
+    return `${this.brand} is Starting`;
   }
 }
-class Car extends Vehicle{
-  constructor(brand,model) {
-    super(brand)
-    this.model =model
-  }
 
+class car extends vehicle {
+  constructor(brand, model) {
+    super(brand);
+    this.model = model;
+  }
   start() {
-      return `${this.brand} is starting`;
+    return `${this.brand} is starting`;
   }
 }
-var kendaraan =new Car("BMW",);
-console.log(kendaraan.start());
 
-// no 2
+let car1 = new car("Toyota", "innova");
+console.log(car1.Start());
+
+// soal 1 clear
+
+
+//soal 2 start
 
 class Shape {
-
-draw() {
-  return "Drawing shape";
-}
-}
-class Rectangle extends Shape{
-
-draw() {
-    return `Drawing rectangle `;
-}
-}
-var bentuk = new Rectangle()
-console.log(bentuk.draw());
-
-// no 3
-class Person {
-constructor(name) {
-  this.name = name;
+  draw() {
+    return "drawing shape";
+    }
 }
 
-introduce() {
-  return `HI, My name is ${this.name}`;
+class Rectangle extends Shape {
+    draw () {
+      return "drawing rectangle";
+    }
+  }
+
+  let rectangle = new Rectangle();
+  console.log(rectangle.draw());
+
+  //soal 2 clear
+
+  //soal 3 start
+
+  class person {
+    constructor(name,) {
+      this.name = name;
+    }
+    introduce(){
+        return `Hi my name is ${this.name}`
+    }
 }
-}
-class Employe extends Person {
-constructor(name,position) {
- super(name)
- this.position =position;
+  
+class Employee extends person {
+  constructor(name, Position) {
+    super(name);
+    this.Position = Position;
+  }
+  introduce(){
+    return `Hi my name is ${this.name} and I am an ${this.Position}`
+  }
 }
 
-introduce() {
-  return `${this.name} and I am an ${this.position}`;
-}
-}
-class Manager extends Employe {
-constructor(name,position) {
-  super(name,position)
-}
-introduce() {
-  return `${this.name} and I am an ${this.position} and I manage a team `;
-}
+class Manager extends Employee { 
+  constructor(name, Position,) {
+    super(name, Position);
+  }
+  introduce(){
+    return `Hi my name is ${this.name} and I am an ${this.Position} and i manage a team"`
+  }
+    
 }
 
-var orang = new Manager('Fadgham','school') 
-console.log(orang.introduce());
+let people = new person("Yewon");
+console.log(people.introduce());
+
+let employee = new Employee("Yewon", "Programmer");
+console.log(employee.introduce());
+
+let manager = new Manager("Yewon", "Manager");
+console.log(manager.introduce());
+
+//soal 3 clear
