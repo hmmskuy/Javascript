@@ -1,5 +1,5 @@
-var nilai = 100
-var kehadiran = 23
+var nilai = 70
+var kehadiran = 27
 var totalpertemuan = 25
 var presentasekehadiran = kehadiran/totalpertemuan*100
 

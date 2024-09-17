@@ -1,5 +1,5 @@
 // Cast 1
-let hari = "jumat";
+let hari = "sabtu";
 
 switch (hari) {
   case "Senin":
@@ -31,11 +31,11 @@ switch (hari) {
 // cast 2
 for (let i = 1; i <= 27; i++) { // 
   if (i % 3 == 0 && i % 5 == 0) {
-    console.log("FizzBuzz"); // 15
+    console.log("FizzBuzz " + i); // 15
   } else if (i % 3 == 0) {
-    console.log("fizz"); // 3
+    console.log("fizz " + i); // 3
   } else if (i % 5 == 0) {
-    console.log("buzz"); // 5
+    console.log("buzz " + i); // 5
   } else {
     console.log(i);
   }
