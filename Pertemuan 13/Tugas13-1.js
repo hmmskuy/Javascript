@@ -16,8 +16,6 @@ function fetchData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve("Data fetched");
-        // Jika ingin mencoba menangani error, bisa gunakan reject, misalnya:
-        // reject("Error fetching data");
       }, 3000);
     });
   }

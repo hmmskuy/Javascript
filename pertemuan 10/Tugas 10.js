@@ -63,7 +63,7 @@ console.log(confirmPurchase(false, 150));
 //soal 2 clear
 
 //soal 3 start
-
+-
 
 
 function checkStock(requestedQuantity, item) {

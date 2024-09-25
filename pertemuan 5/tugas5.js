@@ -1,5 +1,5 @@
 // Cast 1
-let hari = "sabtu";
+let hari = "Sabtu";
 
 switch (hari) {
   case "Senin":
@@ -29,7 +29,7 @@ switch (hari) {
 
 
 // cast 2
-for (let i = 1; i <= 27; i++) { // 
+for (let i = 1; i <= 70; i++) { // 
   if (i % 3 == 0 && i % 5 == 0) {
     console.log("FizzBuzz " + i); // 15
   } else if (i % 3 == 0) {
