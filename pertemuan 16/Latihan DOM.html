@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba DOM</title>
+</head>
+
+<body>
+    <!-- Soal 1 START -->
+    <div id="nama">Hammam</div>
+    <p class="sekolah">Saya Santri<b>PondokTahfizh Plus abudzar</b></p>
+    <span class="sekolah" style="font-size: 30px;">Bogor, Rumpin</span>
+    <script>
+        let id = document.getElementById('nama')
+        id.style.color = ("red")
+        let query = document.querySelector('.sekolah')
+        query.innerText = "coba createElement"
+    </script>
+    <!-- Soal 1 END -->
+    <!-- Soal 2  START -->
+    <div class="konten">
+        Text Awal
+    </div>
+    <script>
+        let tes = document.getElementsByClassName("konten")
+        tes.innerHTML = '<b>Text baru</b>'
+        tes.innerText = "Text baru"
+        tes.textContent = 'Text baru'
+        console.log(tes.innerHTML);
+        console.log(tes.innerText);
+        console.log(tes.textContent);
+    </script>
+    <!-- soal 2 END -->
+    <!-- soal 3 START -->
+     <script>
+        const ul = document.createElement("ul");
+        const item = ["item1","item2","item3"]
+        for (let i = 0; i < items.length; i++) {
+            const li = document.createElement('li');  
+            li.textContent = items[i];               
+            ul.appendChild(li);                       
+        }
+        document.getElementById('listContainer').appendChild(ul);
+        const firstLi = ul.firstElementChild;       // Mengambil <li> pertama
+            ul.removeChild(firstLi);   
+     </script>
+    <!-- soal 3 CLEAR --> 
+</body>
+
+</html>

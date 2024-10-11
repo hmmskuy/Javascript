@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah warna teks</title>
+</head>
+<body>
+    <!-- Soal 4 START  -->
+    <div id="colorBox">Ini adalah teks yang akan diubah warnanya.</div>
+    <script>
+        // Meminta pengguna memasukkan warna
+        let color = prompt("Masukkan warna yang ingin diterapkan pada teks (misalnya: red, blue, green):");
+        const validColors = ["red", "blue", "green"];
+        // Memeriksa apakah warna yang dimasukkan valid
+        if (validColors.includes(color)) {
+            document.getElementById("colorBox").style.color = color; // Mengubah warna teksx1x1
+        } else {
+            alert("Warna tidak valid. Silahkan masukan warna yang benar."); // Menampilkan pesan peringatan
+        }
+    </script>
+    <!-- soal 4 END -->
+</body> 
+</html>
