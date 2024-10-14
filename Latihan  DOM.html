@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM</title>
+</head>
+
+<body>
+    <!-- soal 1 START -->
+    <img id="mylmage">
+    <script>
+        const image = document.getElementById('MyImage');
+        image.src = 'https://picsum.photos/200/300';
+        document.body.appendChild(image);
+    </script>
+    <!-- soal 1 END  -->
+    <!-- soal 2 START  -->
+    <button class="mybutton"></button>
+    <script>
+        const tombol = document.getElement.ById('mybutton')
+        tombol.style.border = "25px";
+        tombol.style.background = "red";
+    </script>
+    <!-- Soal 2 CLEAR -->
+    <!-- Soal 3 START -->
+    <ul id="myList">
+        <li id="myItem">Item baru</li>
+    </ul>
+    <script>
+        const list = document.getElementById('myList');
+        const item = document.createElement('li');
+        item.innerText = 'Item Baru';
+        item.appendChild(item);
+    </script>
+    <!-- Soal 3 CLEAR  -->
+    <!-- soal 4 START -->
+    <ul id="myList">
+        <li id="myItem">Item baru</li>
+    </ul>
+    <script>
+        const sisipkan = document.createElement('li');
+        sisipkan.innerText = 'Item Sisipan';
+        list.insertBefore(sisipkan, item);
+    </script>
+    <!-- Soal 4 CLEAR  -->
+    <div id="imageContainer"></div>
+    <script>
+        const container = document.getElementById('imageContainer');
+        const gambar = document.createElement('img');
+        gambar.setAttribute('src', 'https://picsum.photos/200/300');
+        gambar.style.borderRadius = "50%"
+        container.appendChild(gambar);
+    </script>
+    <!-- soal 5 CLEAR  -->
+</body>
+</html>
