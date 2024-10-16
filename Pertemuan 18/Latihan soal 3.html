@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Jumlah Klik</title>
+</head>
+<body>
+    <!-- Soal 3 START  -->
+    <button id="clickButton">Click Here</button>
+    <p>Jumlah klik: <span id="clickCount">0</span></p>
+
+    <script>
+        let clickCount = 0;
+
+        function updateClickCount() {
+            clickCount++; 
+            document.getElementById('clickCount').innerText = clickCount;
+        }
+        document.getElementById('clickButton').addEventListener('click', updateClickCount);
+    </script>
+    <!-- Soal 3 ENd  -->
+</body>
+</html>

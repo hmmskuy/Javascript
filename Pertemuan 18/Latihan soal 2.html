@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Tombol dengan Event Listener</title>
+    <button id="myButton"></button>
+</head>
+
+<body>
+    <!-- Soal 2 START -->
+    <script>
+        function showAlert() {
+            alert('Tombol telah berhasil diklik!');
+        }
+        window.onload = function(){
+            const button = document.getElementById('myButton');
+            button.addEventListener('click', showAlert);
+        }
+    </script>
+    <!-- Soal 2 END  -->
+</body>
+
+</html>
