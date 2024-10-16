@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan  Tugas 19</title>
+</head>
+<body>
+    <!-- soal 1 STRAT  -->
+    <button id="triggerButton">Klik saya!</button>
+    <script>
+        const customClickEvent = new Event('customClickEvent');
+        function handleCustomClick(){
+            console.log('Custom Click event triggered');
+        }
+        document.addEventListener('customClickEvent', handleCustomClick);
+        const triggerButton = document.getElementById('triggerButton');
+        triggerButton.addEventListener('click', function() {
+            document.dispatchEvent(customClickEvent);
+        });
+    </script>
+    <!-- soal 1 END  -->
+</body>
+</html>
