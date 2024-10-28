@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tugas 20</title>
+    <a href="https://www.example.com" id="myLink">kunjungi Example.com</a>
+</head>
+
+<body>
+    <div class="message" id="message"></div>
+    <script>
+        link.addEventListener("click", function (event) {
+            Event.preventDefault();
+            messageDiv.textContent =
+                "Anda memiliki link. akan tetapi tidak akan diarahkan ke Example.com";
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("myButton");
+            button.addEventListener("click", function () {
+                alert("Button clicked!");
+            });
+        });
+    </script>
+    <!-- Mouseover -->
+    <script>
+        doxument.getElementById("myDiv").addEventListener("mouseover", function () {
+            this.style.backgroundColor = "yellow";
+        });
+    </script>
+    <!-- keydown -->
+    <script>
+        document.addEventListener("keydown", function (event) {
+            console.log("key pressed" + event.key);
+        });
+    </script>
+    <!-- Submit -->
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Form submitted!");
+        });
+    </script>
+    <!-- input -->
+    <input type="text" id="myInput">
+    <script>
+        bmitdocument.getElementById("myInput").addEventListener("submit", function (event) {
+            consle.log("Input value changed to:" + this.value)
+        });
+    </script>
+    <!-- focus  -->
+    <script>
+        input.addEventListener("focus", function () {
+            console.log("Input field is focused!");
+            this.style.backgroundColor ="lightyellow";
+        });
+        textarea.addEventListener("copy", function (){
+                alert("Text copied to clipboard!");
+            });
+    </script>
+</body>
+
+</html>

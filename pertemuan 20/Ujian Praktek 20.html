@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian praktek Tugas 20</title>
+    <style>
+        /* Gaya untuk elemen div */
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            /* Warna awal */
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tugas 1 START -->
+    <p>Pencegah Pengiriman form</p>
+    <form id="userForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <script>
+        // Dapatkan elemen form
+        const form = document.getElementById('userForm');
+
+        // Tambahkan event listener untuk submit
+        form.addEventListener('submit', function (event) {
+            // Mencegah pengiriman form secara default
+            event.preventDefault();
+
+            // Ambil nilai input nama dan email
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Tampilkan pesan dengan data yang dimasukkan
+            alert(`Nama: ${name}\nEmail: ${email}`);
+        }); 
+    </script>
+    <!-- Tugas 1 SELESAI  -->
+    <!-- Tugas 2 START  -->
+    <!-- Elemen div -->
+    <div id="colorBox"></div>
+
+    <script>
+        // Dapatkan elemen div
+        const colorBox = document.getElementById('colorBox');
+
+        // Tambahkan event listener untuk mouseover
+        colorBox.addEventListener('mouseover', function () {
+            // Ubah warna latar belakang saat mouse berada di atasnya
+            colorBox.style.backgroundColor = 'lightgreen';
+        });
+
+        // Tambahkan event listener untuk mouseout
+        colorBox.addEventListener('mouseout', function () {
+            // Kembalikan warna latar belakang ke warna awal saat mouse keluar
+            colorBox.style.backgroundColor = 'lightblue';
+        });
+    </script>
+    <!-- Tugas 2 SELESAI  -->
+</body>
+
+</html>
