@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Coba Storage</title>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="Masukan Username" />
+    <button id="saveButton"> Simpan Username</button>
+    <button id="loadButton">Ambil Username</button>
+    <button id="removeButton">Hapus Username</button>
+    <p id="outputButton"></p>
+    <script>
+        // localStorage menyimpan data
+        document.getElementById("saveButton").addEventListener("click", function () {
+            const username = doxument.getElementById("username").value;
+            localStorage.setItem("username", username);
+            alert("Username disimpan: " + username);
+        });
+        // localStorage mengabil data 
+        document.getElementById("loadButton").addEventListener("click", function () {
+            const storedUsername = localStorage.getItem("username");
+            document.getElementById("output").innerText = "Username yang disimpan:"
+                + (storedUsername ? storedUsername : "tidak ada");
+        });
+        // localStorage menghapus data 
+        document.getElementById('removeButton').addEventListener('click', function () {
+            localStorage.removeItem('username');
+            alert('Username dihapus.');
+        });
+        // sessionStorage 
+        sessionStorage.setItem('username', 'johnDoe');
+        const username = sessionStorage.getItem('username');
+        console.log(username);
+        sessionStorage.removeItem('username');
+        sessionStorage.clear();
+    </script>
+</body>
+
+</html>

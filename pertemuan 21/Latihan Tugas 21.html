@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Simpan Nama</title>
+</head>
+<body>
+    <h2>Masukkan Nama Pengguna</h2>
+    <form id="userForm">
+        <input type="text" id="usernameInput" placeholder="Masukkan nama Anda" required>
+        <button type="submit">Simpan</button>
+    </form>
+    
+    <h3 id="message"></h3>
+
+    <script>
+        // Fungsi untuk menampilkan nama yang tersimpan atau pesan jika tidak ada data
+        function displayUsername() {
+            const savedName = localStorage.getItem("username");
+            const messageElement = document.getElementById("message");
+            if (savedName) {
+                messageElement.textContent = `Nama yang disimpan: ${savedName}`;
+            } else {
+                messageElement.textContent = "Belum ada nama yang disimpan.";
+            }
+        }
+
+        // Menampilkan nama saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", displayUsername);
+
+        // Menangani form submission
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("usernameInput").value;
+            localStorage.setItem("username", username);
+            displayUsername(); // Update pesan setelah menyimpan nama
+            document.getElementById("usernameInput").value = ""; // Reset input
+        });
+    </script>
+</body>
+</html>
